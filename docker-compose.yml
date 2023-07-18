@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  ccxt:
+    image: ccxt
+    container_name: ccxt
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+       - 8085:8085
